@@ -1,0 +1,79 @@
+Note: Link github: https://github.com/locnv2901/KAI_TTS_WEEK1
+Mỗi bạn tạo 1 branch: Làm bài tập xong thì đẩy lên branch đó: Mỗi bài sẽ là 1 folder
+ 
+
+1.	Kiến thức ôn tập
+-	Các kiểu dữ liệu + Biến và Hằng
+-	Các toán tử trong java (Toán học, quan hệ, thao tác bit, logic, gán, các toán tử hỗn hợp khác)
+-	Cấu trúc rẽ nhánh (if else, switch case)
+-	Cấu trúc vòng lặp (for, while, do while) và các lệnh điều khiển trong vòng lặp (continue, break)
+-	Mảng/ danh sách trong Java
+-	String, StringBuilder, StringBuffer và các phương thức của lớp này.
+-	Hướng đối tượng và các tính chất của hướng đối tượng
+-	Access Modifier (Phạm vi truy cập trong java)
+-	Lớp, thuộc tính, phương thức trong java, constructor
+
+2.	Bài tập
+1.	Viết chương trình nhập vào số điện sử dụng của tháng và tính tiền điện theo phương pháp lũy tiến
+Nếu số điện sử dụng từ 0 đến 50 thì giá mỗi số điện là 1000
+Nếu số điện sử dụng trên 50 thì giá mỗi số điện vượt hạn mức là 1200
+Nếu số điện sử dụng trên 100 thì giá mỗi số điện vượt hạn mức là 1500
+Input: Số điện sử dụng (Ycau check dữ liệu nhập đúng  nếu sai thông báo lỗi yêu cầu nhập lại)
+Output : Số tiền cần phải trả.
+
+2.	Viết chương trình nhập vào 3 số nguyên dương a,b,c
+In ra màn hình kết luận về tam giác có 3 cạnh trên (tam giác thường, tam giác vuông, tam giác cân, tam giác vuông cân, tam giác đều hoặc không phải tam giác)
+
+3.	Đảo ngược số nguyên. Viết chương trình nhập từ bàn phím vào 1 số nguyên a và in ra số đảo ngược của a. Ví dụ input: 20240922  output : 22904202. Yêu cầu không sử dụng phương thức reserve của String để đảo ngược.
+
+4.	Đổi sang số nhị phân của 1 số nguyên dương n
+Ví dụ nhập sao số dương 8 in ra màn hình số nhị phân của nó là 1000
+Input : Số nguyên dương n từ bàn phím (Ycau check dữ liệu nhập đúng  nếu sai thông báo lỗi yêu cầu nhập lại)
+Output: Số nhị phân của số n
+7 -> 111
+9 -> 1001
+
+5.	Viết chương trình nhập từ bàn phím một số nguyên n ( n> 0 ). Tạo mảng số nguyên A với kích thước là n. Nhập lần lượt từ bàn phím các giá trị A[0], A[1], A[2],… A[n]. Sau đó in ra mảng con tăng dài nhất của mảng A
+Ví dụ: Với mảng: {10, 22, 9, 33, 21, 51, 41, 60, 80}, dãy con tăng dài nhất là {10, 22, 33, 51, 60, 80}.
+
+6.	Đầu vào là một chuỗi ký tự S bất kỳ được nhập từ bàn phím. Viết chương trình tìm tất cả các ký tự bị lặp và số lần lặp của ký tự đó trong chuỗi ký tự S (không tính ký tự space, không phân biệt hoa thường).
+Ex: Input S = hoc lap trinh o kai asia. code nhieu thi se nhanh len trinh
+Output : h : 7; o : 3; ….
+
+7.	Cần có tổng 100.000đ từ 3 loại giấy bạc 1000đ, 2000đ, và 5000đ. Lập chương tình để tìm tất cả các phương án có thể. In kết quả dưới dạng: 
+PA 1 ( số tờ 1 * 1000; số tờ 2 * 2000; số tờ 3 * 5000)
+(Mở rộng hơn: Số tiền nhập từ bàn phím)
+
+8.	Viết chương trình kiểm tra 1 chuỗi String nhập vào có phải 1 số điện thoại hay không? Chuỗi này được nhập từ bàn phím
+Với các yêu cầu như sau:
+-	Số điện thoại có 9 số (không bao gồm số 0 ở đầu tức là có thể là +84xxxxxxxxx hoặc 0xxxxxxxxx hoặc 84xxxxxxxxx)
+-	Số điện thoại có thể chứa các ký tự như – hoặc .( Ví dụ 0xxx.xxx.xxx hoặc 0xxx-xxx-xxx)
+
+9.	Viết chương trình tổng hợp của các bài tập trên:
+-	Viết chương trình khi khởi chạy sẽ in ra menu như sau:
++ 	+
+1.	Tính tiền điện
+2.	Kiểm tra tam giác
+3.	Đảo ngược số nguyên
+4.	Đổi sang nhị phân
+5.	Dãy con lớn nhất
+6.	Tìm ký tự lặp
+7.	Chia tiền
+8.	Kiểm tra số điện thoại
+9.	Thoát
++ 	+ Chọn chức năng: _
+
+-	Người dùng nhập ký tự số từ 1  9. Nếu nhập sai yêu cầu nhập lại
+-	Sử dụng điều kiện lặp để gọi đến các chương trình tương ứng bài 1,2,3,4…
+-	Sau khi xử lý chương trình xong thì in lại menu để người dùng chọn tiếp đến khi người dùng chọn Thoát.
+
+3.	Tìm hiểu nâng cao và các kiến thức bổ sung
+-	Nếu đã ôn tập xong các kiến thức ở mục 1 và cảm thấy chắc chắn. Thi ôn tập thêm về:
+o	Interface và abstract class
+o	Overriding và Overloading
+o	Super
+o	Hằng số | Enum
+o	Collections kết hợp với Comparable và Comparator
+
+
+-	Nếu muốn thêm bài tập nâng cao hơn nữa thì sau khi push hết bài lên git. Inbox zalo anh sẽ gửi thêm bài tập nâng cao hơn liên quan đến đọc ghi file. Có thể kết hợp 1 số thư viện để làm việc với các loại file : excel, binary,…
