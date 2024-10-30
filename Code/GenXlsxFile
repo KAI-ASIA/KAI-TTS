@@ -1,0 +1,62 @@
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Random;
+
+public class ExcelGenerator {
+
+    private static final String[] CUSTOMER_TYPES = {"VIP", "NORMAL", "PREMIUM"};
+    private static final String[] STATUS_TYPES = {"ACTIVE", "INACTIVE"};
+    private static final String FILE_NAME = "CustomerData.xlsx";
+
+    public static void main(String[] args) {
+        Workbook workbook = new XSSFWorkbook();
+        Sheet sheet = workbook.createSheet("Customers");
+        createHeaderRow(sheet);
+
+        Random random = new Random();
+
+        for (int i = 1; i <= 10000000; i++) { // Adjust for large number of records
+            Row row = sheet.createRow(i);
+            row.createCell(0).setCellValue("CUST" + i);
+            row.createCell(1).setCellValue("Customer " + i);
+            row.createCell(2).setCellValue(18 + random.nextInt(63)); // Age between 18 and 80
+            row.createCell(3).setCellValue(generatePhoneNumber(random));
+            row.createCell(4).setCellValue("customer" + i + "@example.com");
+            row.createCell(5).setCellValue(CUSTOMER_TYPES[random.nextInt(CUSTOMER_TYPES.length)]);
+            row.createCell(6).setCellValue(STATUS_TYPES[random.nextInt(STATUS_TYPES.length)]);
+        }
+
+        try (FileOutputStream fileOut = new FileOutputStream(FILE_NAME)) {
+            workbook.write(fileOut);
+            System.out.println("Excel file generated: " + FILE_NAME);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                workbook.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private static void createHeaderRow(Sheet sheet) {
+        Row headerRow = sheet.createRow(0);
+        String[] headers = {"CustomerId", "CustomerName", "Age", "Phone", "Email", "CustomerType", "Status"};
+        for (int i = 0; i < headers.length; i++) {
+            Cell cell = headerRow.createCell(i);
+            cell.setCellValue(headers[i]);
+        }
+    }
+
+    private static String generatePhoneNumber(Random random) {
+        return "+84-" + (1000000 + random.nextInt(9000000));
+    }
+
+}
