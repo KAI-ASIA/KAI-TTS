@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://14.225.254.212:5432/KAI
+    username: for_test
+    password: for_test@2024
+    driver-class-name: org.postgresql.Driver
