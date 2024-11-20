@@ -1,6 +1,8 @@
 package sb.locnv.w6.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import sb.locnv.w6.dto.CustomerTypeDto;
 import sb.locnv.w6.entitty.CustomerType;
@@ -19,13 +21,18 @@ public class CustomerTypeService implements ICustomerTypeService {
 
 
     @Override
-    public List<CustomerTypeDto> getCustomerType() {
+    public List<CustomerTypeDto> getCustomerType(Integer page, Integer pageSize) {
         List<CustomerTypeDto> res = new ArrayList<>();
 
-        List<CustomerType> list = customerTypeRepository.findAll();
+        if(page == null)
+            page = 0;
 
-        if(list != null){
-            list.forEach(x -> res.add(new CustomerTypeDto(x)));
+        Page<CustomerType> pages = customerTypeRepository.findAll(PageRequest.of(page, pageSize));
+
+//        List<CustomerType> list = new ArrayList<>();
+
+        if(page != null){
+            pages.forEach(x -> res.add(new CustomerTypeDto(x)));
         }
 
         return  res;

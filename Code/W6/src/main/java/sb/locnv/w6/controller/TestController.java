@@ -1,6 +1,7 @@
 package sb.locnv.w6.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import sb.locnv.w6.dto.CustomerTypeDto;
@@ -15,12 +16,14 @@ public class TestController {
     @Autowired
     private ICustomerTypeService customerTypeService;
 
-    @GetMapping("/customerType")
-    public ResponseEntity getCustomerType(){
-        List<CustomerTypeDto> list = customerTypeService.getCustomerType();
+    @GetMapping(value = "/customerType")
+    public ResponseEntity getCustomerType(@RequestParam Integer page, @RequestParam Integer pageSize){
+        List<CustomerTypeDto> list = customerTypeService.getCustomerType(page, pageSize);
 
         return ResponseEntity.ok(list);
     }
+
+
 
 
     @PostMapping("/customerType")

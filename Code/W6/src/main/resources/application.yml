@@ -4,3 +4,6 @@ spring:
     username: for_test
     password: for_test@2024
     driver-class-name: org.postgresql.Driver
+  redis:
+    host: 14.225.254.212
+    port: 6379

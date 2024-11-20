@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ICustomerTypeService {
 
-    List<CustomerTypeDto> getCustomerType();
+    List<CustomerTypeDto> getCustomerType(Integer page, Integer pageSize);
 
     Long insert(CustomerTypeDto customerType) throws DuplicateKeyException;
 }
