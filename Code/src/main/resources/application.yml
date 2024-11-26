@@ -1,9 +1,12 @@
 spring:
+  application:
+    name: w8
   datasource:
     url: jdbc:postgresql://14.225.254.212:5432/KAI
     username: for_test
     password: for_test@2024
     driver-class-name: org.postgresql.Driver
-  redis:
-    host: 14.225.254.212
-    port: 6379
+  security:
+    user:
+      name: locnv3
+      password: kaiasia
