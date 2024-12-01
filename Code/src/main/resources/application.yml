@@ -1,12 +1,33 @@
 spring:
   application:
-    name: w8
+    name: week9
   datasource:
     url: jdbc:postgresql://14.225.254.212:5432/KAI
     username: for_test
     password: for_test@2024
     driver-class-name: org.postgresql.Driver
-  security:
-    user:
-      name: locnv3
-      password: kaiasia
+  kafka:
+    bootstrap-servers: 14.225.254.212:9092
+    consumer:
+      group-id: test-group
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      vale-serializer: org.apache.kafka.common.serialization.StringSerializer
+redis:
+  host: 14.225.254.212
+  port2Read: 6379
+  port2Write: 6379
+  numDB: 2
+
+kafka:
+  bootsTrapServer: 14.225.254.212:9090
+  maximum-retry: 3
+  usernameACL:
+  pwACL:
+  pollSize: 1000
+  pollTime: 500
+  thread: 6
+  thread-error: 1
+  consumer-waiting: 500
+  authentication: false
+  clientId: node01-localhost
