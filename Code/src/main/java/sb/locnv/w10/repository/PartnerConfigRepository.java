@@ -1,7 +1,7 @@
-package sb.locnv.week9learn.repository;
+package sb.locnv.w10.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import sb.locnv.week9learn.entity.PartnerConfig;
+import sb.locnv.w10.entity.PartnerConfig;
 
 public interface PartnerConfigRepository extends JpaRepository<PartnerConfig, String> {
 }
