@@ -1,0 +1,6 @@
+AUTHEN_API : auth_api/auth@kaiasia
+CUSINFO_API: custinfo_api/custinfo@kaiasia
+NOTIFY_API: noti_api/notify@kaiasia
+EBANK_API: ebank_api/ebank@kaiasia
+ACCOUNT_API: account_api/account@kaiasia
+UTILITY_API: utility/utility@kaiasia
