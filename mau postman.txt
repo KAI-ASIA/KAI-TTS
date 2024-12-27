@@ -1,0 +1,23 @@
+curl --location 'http://localhost:8080/DEMO_API/process' \
+--header 'Content-Type: application/json' \
+--data '{
+    "header": {
+        "reqType": "REQUEST",
+        "api": "DEMO_API",
+        "apiKey": "keyTest",
+        "priority": "1",
+        "channel": "API",
+        "location": "PC/IOS",
+        "requestAPI": "FE API",
+        "requestNode" : "node 01",
+        "synasyn": "false"
+    },
+    "body": {
+        "command": "GET_ENQUIRY",
+        "enquiry": {
+            "authenType": "TestService",
+            "sessionId": "158963500-20161118110507-1479441907619",
+            "username": ""
+        }
+    }
+}'
