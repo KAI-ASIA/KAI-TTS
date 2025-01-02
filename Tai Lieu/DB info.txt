@@ -4,3 +4,6 @@ NOTIFY_API: noti_api/notify@kaiasia
 EBANK_API: ebank_api/ebank@kaiasia
 ACCOUNT_API: account_api/account@kaiasia
 UTILITY_API: utility/utility@kaiasia
+
+
+create user t24util with password 't24util@2024'
